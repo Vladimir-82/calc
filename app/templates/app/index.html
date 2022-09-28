@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Calculator{% endblock %}</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script type="text/javascript" src="{% static 'app/java_script/app.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'app/css/app.css' %}">
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="git" style="text-decoration: none">
+        <img src="{% static 'app/image/logo_100x100.jpg' %}" alt="logo" class="logo">
+        <span class="fs-2">Calculator from Uladzimir</span>
+      </a>
+          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                <div class="git">
+                    <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/vladimir-kostukevich-597a6b22b/">linkedin</a>
+                    <a class="btn btn-outline-primary" href="https://www.codewars.com/users/Vladimir-82/">Code Wars</a>                            <a class="btn btn-outline-primary" href="https://github.com/Vladimir-82/">MY GIT HUB</a>
+                </div>
+          </nav>
+    </div>
+
+    <div class="inner">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="buttons">
+            <div class="btn-group">
+              <button class="but" data-value="1">1</button>
+              <button class="but" data-value="2">2</button>
+              <button>3</button>
+              <button>+</button>
+            </div><br>
+            <div class="btn-group">
+              <button>4</button>
+              <button>5</button>
+              <button>6</button>
+              <button>-</button>
+            </div><br>
+            <div class="btn-group">
+              <button>7</button>
+              <button>8</button>
+              <button>9</button>
+              <button>*</button>
+            </div><br>
+            <div class="btn-group">
+              <button>0</button>
+              <button>/</button>
+            </div><br>
+        </div>
+
+
+        <div class="main_buttons">
+            <input type="text" name="meaning" id="meaning" value="" style="width: 249px"><br>
+            <button type="submit" id='submit' class="btn btn-primary" style="margin-top: 5%">Разлічыць</button>
+            <button type="reset" id="reset" class="btn btn-danger" style="margin-top: 5%; margin-left: 18%">Ачысціць</button>
+        </div>
+    </form>
+    </div>
+    {% if answer %}
+        <div class="answer"><h3>{{ answer }}</h3></div>
+    {% endif %}
+
+
+</body>
+</html>

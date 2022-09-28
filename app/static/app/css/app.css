@@ -1,0 +1,43 @@
+.btn-group button {
+    background-color: royalblue;
+    border: 1px solid green;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    float: left;
+    margin: 5px;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.btn-group button:hover {
+    background-color: black;
+}
+
+
+.git {
+    margin: 20px;
+}
+
+.inner {
+  display: table;
+  margin: 0 auto;
+}
+
+
+.answer {
+  text-align: center;
+  margin: 0 auto;
+  display: table;
+  background-color: cornflowerblue;
+  border-radius: 0 0 5px 5px;
+}
