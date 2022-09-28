@@ -8,7 +8,7 @@ def index(request):
         action = request.POST['meaning']
 
 
-        context = {"answer": "answer"}
+        context = {"answer": action}
         return render(request, 'app/index.html', context=context)
     else:
         context = {"answer": "answer"}
