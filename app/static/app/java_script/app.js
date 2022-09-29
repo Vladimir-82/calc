@@ -2,8 +2,6 @@ $(document).ready(function () {
     $('button.but').click(function () {
         var audioElement = document.createElement("audio");
         var number = $(this).data('value');
-
-
         var idvalue = $(this).attr('id');
             if (idvalue == "one") {
                 audioElement.src = "https://github.com/Vladimir-82/speach/blob/master/one.mp3?raw=true";
@@ -43,10 +41,3 @@ $(document).ready(function () {
 
 
 
-// $(document).ready(function(){
-//     var audioElement = document.createElement("audio");
-//         audioElement.src = "https://github.com/Vladimir-82/speach/blob/master/one.mp3?raw=true";
-//         $('button.but').click(function(){
-//             audioElement.play();
-//     });
-// });
