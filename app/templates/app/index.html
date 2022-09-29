@@ -28,30 +28,28 @@
         {% csrf_token %}
         <div class="buttons">
             <div class="btn-group">
-              <button type="button" class="but" data-value="1">1</button>
-              <button type="button" class="but" data-value="2">2</button>
-              <button type="button" class="but" data-value="3">3</button>
-              <button type="button" class="but" data-value="+">+</button>
+              <button type="button" class="but" id="one" data-value="1">1</button>
+              <button type="button" class="but" id="two" data-value="2">2</button>
+              <button type="button" class="but" id="three" data-value="3">3</button>
+              <button type="button" class="but" id="plus" data-value="+">+</button>
             </div><br>
             <div class="btn-group">
-              <button type="button" class="but" data-value="4">4</button>
-              <button type="button" class="but" data-value="5">5</button>
-              <button type="button" class="but" data-value="6">6</button>
-              <button type="button" class="but" data-value="-">-</button>
+              <button type="button" class="but" id="four" data-value="4">4</button>
+              <button type="button" class="but" id="five" data-value="5">5</button>
+              <button type="button" class="but" id="six" data-value="6">6</button>
+              <button type="button" class="but" id="minus" data-value="-">-</button>
             </div><br>
             <div class="btn-group">
-              <button type="button" class="but" data-value="7">7</button>
-              <button type="button" class="but" data-value="8">8</button>
-              <button type="button" class="but" data-value="9">9</button>
-              <button type="button" class="but" data-value="*">*</button>
+              <button type="button" class="but" id="seven" data-value="7">7</button>
+              <button type="button" class="but" id="eight" data-value="8">8</button>
+              <button type="button" class="but" id="nine" data-value="9">9</button>
+              <button type="button" class="but" id="multiply" data-value="*">*</button>
             </div><br>
             <div class="btn-group">
-              <button type="button" class="but" data-value="0">0</button>
-              <button type="button" class="but" data-value="/">/</button>
+              <button type="button" class="but" id="zero" data-value="0">0</button>
+              <button type="button" class="but" id="divide" data-value="/">/</button>
             </div><br>
         </div>
-
-
         <div class="main_buttons">
             <input type="text" name="meaning" id="meaning" value="" style="width: 249px"><br>
             <button type="submit" id='submit' class="btn btn-primary" style="margin-top: 5%; margin-bottom: 5%">Разлічыць</button>
@@ -61,6 +59,9 @@
     </div>
     {% if answer %}
         <div class="answer"><h3>{{ answer }}</h3></div>
+        <div class="inner">
+        <a class="btn btn-warning" href="/" style="margin-top: 10px">Скід</a>
+        </div>
     {% endif %}
 
 
