@@ -8,7 +8,7 @@ def index(request):
         answer_num = count(action)
         if isinstance(answer_num, int) or isinstance(answer_num, float):
             context = {"answer": str(answer_num)}
-            # say(str(answer_num))
+            say(str(answer_num))
             return render(request, 'app/index.html', context=context)
         else:
             context = {"answer": 'Аперацыя не падтрымліваецца'}
