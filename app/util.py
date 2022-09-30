@@ -41,27 +41,29 @@ def count(text):
 def say(text):
     for i in text:
         if i == '1':
-            number = vlc.MediaPlayer(''.join(("/app/", "media/", "one.wav")))
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "one.wav")))
         elif i == '2':
-            number = vlc.MediaPlayer(''.join(("/app/", "media/", "two.wav")))
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "two.wav")))
         elif i == '3':
-            number = vlc.MediaPlayer(''.join(("/app/", "media/", "three.wav")))
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "three.wav")))
         elif i == '4':
-            number = vlc.MediaPlayer(''.join(("/app/", "media/", "four.wav")))
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "four.wav")))
         elif i == '5':
-            number = vlc.MediaPlayer(''.join(("/app/", "media/", "five.wav")))
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "five.wav")))
         elif i == '6':
-            number = vlc.MediaPlayer(''.join(("/app/", "media/", "six.wav")))
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "six.wav")))
         elif i == '7':
-            number = vlc.MediaPlayer(''.join(("/app/", "media/", "seven.wav")))
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "seven.wav")))
         elif i == '8':
-            number = vlc.MediaPlayer(''.join(("/app/", "media/", "eight.wav")))
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "eight.wav")))
         elif i == '9':
-            number = vlc.MediaPlayer(''.join(("/app/", "media/", "nine.wav")))
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "nine.wav")))
         elif i == '0':
-            number = vlc.MediaPlayer(''.join(("/app/", "media/", "zero.wav")))
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "zero.wav")))
         elif i == '-':
-            number = vlc.MediaPlayer(''.join(("/app/", "media/", "minus.wav")))
-
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "minus.wav")))
+        elif i == '.':
+            number = vlc.MediaPlayer(''.join(("app/", "media/", "dot.wav")))
+        number.audio_set_volume(100)
         number.play()
         sleep(1)
