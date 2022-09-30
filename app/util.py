@@ -45,7 +45,10 @@ def say(text):
               }
     for i in text:
         treck = meaning.get(i)
-        number = vlc.MediaPlayer(''.join(("app/static/app/media/", treck, ".wav")))
+        path = ''.join(('https://github.com/Vladimir-82/speach/blob/master/'
+                        'sounds_blr/', treck, '.wav?raw=true')
+                       )
+        number = vlc.MediaPlayer(path)
         number.audio_set_volume(100)
         number.play()
         sleep(1)
