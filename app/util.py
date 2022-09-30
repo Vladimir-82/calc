@@ -51,4 +51,4 @@ def say(text):
         number = vlc.MediaPlayer(path)
         number.audio_set_volume(100)
         number.play()
-        # sleep(1)
+        sleep(1)
