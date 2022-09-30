@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .util import *
 
 
+
 def index(request):
     if request.method == 'POST':
         action = request.POST['meaning']
