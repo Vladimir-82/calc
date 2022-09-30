@@ -45,7 +45,7 @@ def say(text):
               }
     for i in text:
         treck = meaning.get(i)
-        number = vlc.MediaPlayer(''.join(("app/", "media/", treck, ".wav")))
+        number = vlc.MediaPlayer(''.join(("app/static/app/media/", treck, ".wav")))
         number.audio_set_volume(100)
         number.play()
         sleep(1)

@@ -141,7 +141,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'app/', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'app/', 'static/app/media')
 MEDIA_URL = '/media/'
 
 class HerokuDiscoverRunner(DiscoverRunner):
