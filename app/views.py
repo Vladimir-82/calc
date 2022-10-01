@@ -10,7 +10,7 @@ def index(request):
         if str(answer_num).endswith('.0'):
             answer_num = int(answer_num)
         context = {"answer": str(answer_num)}
-        say(str(answer_num))
+        # say(str(answer_num))
         return render(request, 'app/index.html', context=context)
     else:
         context = {"answer": "answer"}
