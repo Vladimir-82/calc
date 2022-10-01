@@ -45,6 +45,9 @@ $(document).ready(function () {
                 } else if (idvalue == "divide") {
                 audioElement.src = "https://github.com/Vladimir-82/" +
                     "speach/blob/master/sounds_blr/divide.wav?raw=true";
+                } else if (idvalue == "dot") {
+                audioElement.src = "https://github.com/Vladimir-82/" +
+                    "speach/blob/master/sounds_blr/dot.wav?raw=true";
                 }
         $('#meaning').val(function() {
         audioElement.play();

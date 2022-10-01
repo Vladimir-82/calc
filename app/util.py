@@ -7,31 +7,21 @@ def count(text: str) -> int:
     try:
         if '/' in text:
             splt = text.split('/')
-            if len(splt) > 2:
-                result = '-1'
-            else:
-                result = round(int(splt[0]) / int(splt[1]), 8)
+            result = float(splt[0]) / float(splt[1])
         elif '*' in text:
             splt = text.split('*')
-            if len(splt) > 2:
-                result = '-1'
-            else:
-                result = int(splt[0]) * int(splt[1])
+            result = float(splt[0]) * float(splt[1])
         elif '+' in text:
             splt = text.split('+')
-            if len(splt) > 2:
-                result = '-1'
-            else:
-                result = int(splt[0]) + int(splt[1])
+            result = float(splt[0]) + float(splt[1])
         elif '-' in text:
             splt = text.split('-')
-            if len(splt) > 2:
-                result = '-1'
-            else:
-                result = int(splt[0]) - int(splt[1])
+            result = float(splt[0]) - float(splt[1])
         else:
             result = '-1'
     except Exception:
+        return '-1'
+    if len(splt) > 2:
         return '-1'
     else:
         return result
