@@ -1,33 +1,54 @@
-from gtts import gTTS
-from playsound import playsound
+import vlc
+from time import sleep
 
 
 
-def count(text):
+def count(text: str) -> int:
     try:
         if '/' in text:
             splt = text.split('/')
-            result = int(splt[0]) / int(splt[1])
+            if len(splt) > 2:
+                result = '-1'
+            else:
+                result = round(int(splt[0]) / int(splt[1]), 8)
         elif '*' in text:
             splt = text.split('*')
-            result = int(splt[0]) * int(splt[1])
+            if len(splt) > 2:
+                result = '-1'
+            else:
+                result = int(splt[0]) * int(splt[1])
         elif '+' in text:
             splt = text.split('+')
-            result = int(splt[0]) + int(splt[1])
+            if len(splt) > 2:
+                result = '-1'
+            else:
+                result = int(splt[0]) + int(splt[1])
         elif '-' in text:
             splt = text.split('-')
-            result = int(splt[0]) - int(splt[1])
+            if len(splt) > 2:
+                result = '-1'
+            else:
+                result = int(splt[0]) - int(splt[1])
         else:
-            return 'Unsupported operation'
+            result = '-1'
     except Exception:
-        return 'Unsupported operation'
+        return '-1'
     else:
         return result
 
-def say(text):
-    language = 'en'
-    text_val = text
-    obj = gTTS(text=text_val, lang=language, slow=False)
-    obj.save("answer.mp3")
-    playsound("answer.mp3")
 
+
+def say(text: str) -> None:
+    meaning = {'1': 'one', '2': 'two','3': 'three','4': 'four','5': 'five',
+               '6': 'six', '7': 'seven', '8': 'eight', '9': 'nine',
+               '0': 'zero', '.': 'dot', '-': 'minus',
+              }
+    for i in text:
+        treck = meaning.get(i)
+        path = ''.join(('https://github.com/Vladimir-82/speach/blob/master/'
+                        'sounds_blr/', treck, '.wav?raw=true')
+                       )
+        number = vlc.MediaPlayer(path)
+        number.audio_set_volume(100)
+        number.play()
+        sleep(1)

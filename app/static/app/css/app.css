@@ -41,3 +41,7 @@
   background-color: cornflowerblue;
   border-radius: 0 0 5px 5px;
 }
+
+.but {
+    width: 60px;
+}
