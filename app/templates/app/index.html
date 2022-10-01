@@ -47,20 +47,21 @@
             </div><br>
             <div class="btn-group">
               <button type="button" class="but" id="zero" data-value="0">0</button>
+              <button type="button" class="but" id="dot" data-value=".">.</button>
               <button type="button" class="but" id="divide" data-value="/">/</button>
             </div><br>
         </div>
         <div class="main_buttons">
             <input type="text" name="meaning" id="meaning" value="" style="width: 100%"><br>
-            <button type="submit" id='submit' class="btn btn-primary" style="float: left; margin: 5%">Разлічыць</button>
-            <button type="reset" id="reset" class="btn btn-danger" style="float: right; margin: 5%">Ачысціць</button>
+            <button type="submit" id='submit' class="btn btn-primary" style="float: left; margin: 5%">Count</button>
+            <button type="reset" id="reset" class="btn btn-danger" style="float: right; margin: 5%">Clear</button>
         </div>
     </form>
     </div>
     {% if answer %}
         <div class="answer"><h3>{{ answer }}</h3></div>
         <div class="inner">
-        <a class="btn btn-warning" href="/" style="margin: 10px">Скід</a>
+        <a class="btn btn-warning" href="/" style="margin: 10px">Reset</a>
         </div>
     {% endif %}
 </body>
