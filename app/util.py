@@ -3,7 +3,7 @@ from playsound import playsound
 
 
 
-def count(text):
+def count(text: str):
     try:
         if '/' in text:
             splt = text.split('/')
@@ -28,7 +28,7 @@ def count(text):
 
 
 
-def say(text):
+def say(text: str) -> None:
     language = 'en'
     text_val = text
     obj = gTTS(text=text_val, lang=language, slow=False)
