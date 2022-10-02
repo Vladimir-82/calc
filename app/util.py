@@ -3,7 +3,7 @@ from time import sleep
 
 
 
-def count(text: str) -> int:
+def count(text: str):
     try:
         if '/' in text:
             splt = text.split('/')
